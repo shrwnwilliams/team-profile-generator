@@ -35,7 +35,7 @@ function createManager(){
     {
         type: "input",
         name:"managerNumber",
-        message:"What is the team manager's number?"
+        message:"What is the team manager's office number?"
     },
     {
         type: "list",
@@ -48,7 +48,7 @@ function createManager(){
         const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerNumber);
         // console.log(manager);
         membersArray.push(manager);
-        console.log(membersArray);
+        // console.log(membersArray);
         if (answers.continue === "yes") {
             createTeam();
         } else{
@@ -103,11 +103,11 @@ function createEngineer(){
         choices: ["yes", "no"]
     }
     ]).then(answers => {
-        console.log(answers);
+        // console.log(answers);
         const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGitHub);
-        console.log(engineer);
+        // console.log(engineer);
         membersArray.push(engineer);
-        console.log(membersArray);
+        // console.log(membersArray);
         if (answers.continue=== "yes") {
             createTeam();
         } else {
@@ -146,11 +146,11 @@ function createIntern(){
         choices: ["yes", "no"]
     }
     ]).then(answers => {
-        console.log(answers);
+        // console.log(answers);
         const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
-        console.log(intern);
+        // console.log(intern);
         membersArray.push(intern);
-        console.log(membersArray);
+        // console.log(membersArray);
         if (answers.continue=== "yes") {
             createTeam();
         } else {

@@ -10,7 +10,7 @@ describe("Employee", () => {
                 expect(morgan.name).toEqual("morgan");
                 expect(morgan.id).toEqual(1209);
                 expect(morgan.email).toEqual("morgan@morgan.morgan");
-                expect(morgan.github).toEqual("morgan123");
+                expect(morgan.gitHub).toEqual("morgan123");
             })
         })
     })
