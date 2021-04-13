@@ -1,7 +1,3 @@
-// generate manager card
-// generate engineer card
-// generate intern card
-
 const generateTeam = (team) => {
   const generateManager = (manager) => {
     return `

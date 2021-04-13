@@ -5,14 +5,8 @@ const Engineer = require("./lib/Engineer");
 const fs = require("fs");
 const path = require("path");
 const render = require("./src/page-template");
-
-
 const OUTPUT_DIR = path.resolve(__dirname, "dist")
 const outputPath = path.join(OUTPUT_DIR, "team.html")
-
-
-
-//main logic
 const membersArray = []
 
 function createManager(){
@@ -44,11 +38,8 @@ function createManager(){
         choices: ["yes", "no"]
     }
     ]).then(answers => {
-        // console.log(answers);
         const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerNumber);
-        // console.log(manager);
         membersArray.push(manager);
-        // console.log(membersArray);
         if (answers.continue === "yes") {
             createTeam();
         } else{
@@ -103,11 +94,8 @@ function createEngineer(){
         choices: ["yes", "no"]
     }
     ]).then(answers => {
-        // console.log(answers);
         const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGitHub);
-        // console.log(engineer);
         membersArray.push(engineer);
-        // console.log(membersArray);
         if (answers.continue=== "yes") {
             createTeam();
         } else {
@@ -146,11 +134,8 @@ function createIntern(){
         choices: ["yes", "no"]
     }
     ]).then(answers => {
-        // console.log(answers);
         const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
-        // console.log(intern);
         membersArray.push(intern);
-        // console.log(membersArray);
         if (answers.continue=== "yes") {
             createTeam();
         } else {
