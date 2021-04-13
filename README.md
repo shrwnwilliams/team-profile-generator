@@ -5,6 +5,6 @@ This is the final version of my in-terminal team profile generator. The user, wh
 # Demo Video
 Here is the link to the demo video.
 
-[Demo Video]()
+[Demo Video](https://youtu.be/9XKPv9ZJ4JI)
 
 
