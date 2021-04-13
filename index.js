@@ -10,6 +10,8 @@ const render = require("./src/page-template");
 const OUTPUT_DIR = path.resolve(__dirname, "dist")
 const outputPath = path.join(OUTPUT_DIR, "team.html")
 
+
+
 //main logic
 const membersArray = []
 
@@ -156,6 +158,13 @@ function createIntern(){
         }
     })
 
+}
+
+function buildTeam(){
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdirSync(OUTPUT_DIR);
+    }
+    fs.writeFileSync(outputPath, render(membersArray), "utf-8");
 }
 
 function runApp(){
